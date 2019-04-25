@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(48, 14, 50);
+}
+
+header {
+    height: 50vh;
+    width: 100%;
+    background: url("/Images/Avengers.jpg") no-repeat center;
+    background-size: cover;
+}
