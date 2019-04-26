@@ -1,15 +1,131 @@
 @import url('https://fonts.googleapis.com/css?family=Acme');
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: whitesmoke;
+}
+
+body {
     background-color: rgb(48, 14, 50);
 }
 
-header {
-    height: 50vh;
+h1, h2, h3, #navMenu {
+    font-family: 'Acme', sans-serif;
+}
+
+#topBan {
+    position: relative;
+    height: 45vh;
     width: 100%;
+    margin: 3em 0;
     background: url("/Images/Avengers.jpg") no-repeat center;
     background-size: cover;
+    border-bottom: dotted deeppink 0.5em;
+}
+
+h1 {
+    position: absolute;
+    bottom: 0;
+    font-size: 3em;
+    text-shadow: -2px -2px blueviolet,
+                2px -2px blueviolet,
+                2px 2px blueviolet,
+                -2px 2px blueviolet;
+}
+
+#navMenu {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: top;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+}
+#navMenu li {
+    display: inline;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background-color: rgb(240, 229, 229);
+    border-bottom: solid 0.25em deeppink;
+}
+
+#navMenu li:hover {
+    background-color: blueviolet;
+    height: 4em;
+    line-height: 4em;
+    border-radius: 0 0 1em 1em;
+    border-bottom-color: red;
+    transition: height 0.1s, line-height 0.1s, border-radius 0.1s, border-bottom-color 0.1s;
+    transition-timing-function: ease-out;
+}
+
+#navMenu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    position: relative;
+    margin: 7em 1em;
+    padding: 1em;
+    padding-top: 2em;
+    background-image: radial-gradient(rgba(255, 20, 147, 0.5) 25%, transparent 30%);
+    background-position: 0 0;
+    background-size: 5px 5px;
+    border: solid 2px white;
+}
+
+h2 {
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: -2em;
+    padding: 0.5em 1em;
+    border-radius: 50%;
+    border: solid 5px black;
+    background-color: white;
+    font-size: 2em;
+    color: black;
+}
+
+h2::before {
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    content: " ";
+    border-left: 0.5em solid transparent; 
+    border-right: 0.5em solid transparent; 
+    border-top: 1.5em solid white;
+    transform: rotateZ(40deg);
+}
+
+.persoDescription {
+    display: block;
+    min-height: 170px;
+}
+.imgPortrait {
+    display: inline-block;
+    float: left;
+    width:150px;
+    height:150px;
+    border:solid 5px white;
+    box-shadow:0.3em 0.3em 0.5em black;
+    margin-right: 1em;
+    background-size:cover;
+}
+
+footer{
+    background-color: rgb(76, 27, 94);
+    text-align: center;
+    margin-top: -3em;
+    padding: 1.5em;
+    box-shadow: 0 -0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
